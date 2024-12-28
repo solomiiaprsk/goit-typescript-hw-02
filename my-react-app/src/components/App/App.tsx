@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import { getImages } from "../images-api";
-// import LoadMoreBtn from "./../LoadMoreBtn/LoadMoreBtn";
+import LoadMoreBtn from "./../LoadMoreBtn/LoadMoreBtn";
 // import Loader from "../Loader/Loader";
 import toast, { Toaster } from "react-hot-toast";
-// import ImageModal from "../ImageModal/ImageModal";
+import ImageModal from "../ImageModal/ImageModal";
 import { Image, ImageInfo } from "./App.types";
 
 const App: React.FC = () => {
@@ -70,14 +70,14 @@ const App: React.FC = () => {
       {images.length > 0 && (
         <ImageGallery openModal={openModal} data={images} />
       )}
-      {/* <ImageModal
+      <ImageModal
         isOpen={modalIsOpen}
         closeModal={closeModal}
         imageInfo={imageInfo}
-      /> */}
+      />
       {/* {loading && <Loader />} */}
 
-      {/* {images.length > 0 && <LoadMoreBtn onClick={handleLoadMore} />} */}
+      {images.length > 0 && <LoadMoreBtn onClick={handleLoadMore} />}
     </div>
   );
 };

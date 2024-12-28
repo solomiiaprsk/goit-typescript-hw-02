@@ -24,7 +24,10 @@ export interface ImageGalleryProps {
 export interface ImageModalProps {
   isOpen: boolean;
   closeModal: () => void;
-  imageInfo: ImageInfo;
+  imageInfo: {
+    alt: string;
+    url: string;
+  };
 }
 
 export interface LoadMoreBtnProps {
