@@ -6,7 +6,8 @@ import LoadMoreBtn from "./../LoadMoreBtn/LoadMoreBtn";
 // import Loader from "../Loader/Loader";
 import toast, { Toaster } from "react-hot-toast";
 import ImageModal from "../ImageModal/ImageModal";
-import { Image, ImageInfo } from "./App.types";
+import { ImageInfo } from "./App.types";
+import { Image } from "../types";
 
 const App: React.FC = () => {
   const [images, setImages] = useState<Image[]>([]);
@@ -53,9 +54,9 @@ const App: React.FC = () => {
     fetchImages();
   }, [query, page]);
 
-  const openModal = (alt: string, url: string) => {
+  const openModal = (description: string | null, url: string) => {
     setIsOpen(true);
-    setImageInfo({ alt, url });
+    setImageInfo({ alt: description ?? "No description available", url });
   };
 
   const closeModal = () => {

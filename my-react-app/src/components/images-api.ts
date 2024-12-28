@@ -1,18 +1,10 @@
 import axios from "axios";
+import { Image } from "./types";
 
 axios.defaults.baseURL = "https://api.unsplash.com/";
 
-interface UnsplashImage {
-  id: string;
-  urls: {
-    small: string;
-    regular: string;
-  };
-  description: string | null;
-}
-
 interface UnsplashResponse {
-  results: UnsplashImage[];
+  results: Image[];
   total: number;
   total_pages: number;
 }

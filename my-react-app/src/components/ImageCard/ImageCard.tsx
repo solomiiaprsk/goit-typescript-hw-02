@@ -1,19 +1,10 @@
 import React from "react";
 import css from "./ImageCard.module.css";
-
-interface ImageUrls {
-  small: string;
-  regular: string;
-}
-
-interface Image {
-  urls: ImageUrls;
-  description?: string;
-}
+import { Image } from "../types";
 
 interface ImageCardProps {
   images: Image;
-  openModal: (description: any, url: string) => void;
+  openModal: (description: string | null, url: string) => void;
 }
 
 const ImageCard: React.FC<ImageCardProps> = ({
