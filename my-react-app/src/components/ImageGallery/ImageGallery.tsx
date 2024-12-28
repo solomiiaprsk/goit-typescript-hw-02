@@ -10,7 +10,7 @@ interface ImageUrls {
 interface Image {
   id: string;
   urls: ImageUrls;
-  description?: string;
+  description?: any;
 }
 
 interface ImageGalleryProps {

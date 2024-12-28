@@ -4,7 +4,7 @@ export interface Image {
     small: string;
     regular: string;
   };
-  description: string | null;
+  description: any;
 }
 
 export interface ImageInfo {
@@ -17,7 +17,7 @@ export interface SearchBarProps {
 }
 
 export interface ImageGalleryProps {
-  data: Image[];
+  data: any;
   openModal: (alt: string, url: string) => void;
 }
 
